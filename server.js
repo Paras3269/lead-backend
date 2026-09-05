@@ -68,7 +68,8 @@ app.post("/webhook",(req,res)=>{
           const leadgenId = change.value.leadgen_id;
           console.log(`New Lead Notification. Lead ID: ${leadgenId}`);
 
-          await fetchAndBroadcastLead(leadgenId);
+            fetchAndBroadcastLead(leadgenId)
+                        .catch(err => console.error(err));
         }
       }
     }
