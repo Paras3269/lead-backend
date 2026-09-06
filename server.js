@@ -82,7 +82,7 @@ app.post("/webhook",(req,res)=>{
 async function fetchAndBroadcastLead(leadgenId) {
   try {
     const response = await axios.get(
-      `https://graph.facebook.com/v20.0/${leadgenId}`,
+      `https://graph.facebook.com/v26.0/${leadgenId}`,
       {
         params: {
           access_token: PAGE_ACCESS_TOKEN,
